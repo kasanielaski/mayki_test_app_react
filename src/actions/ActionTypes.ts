@@ -1,0 +1,3 @@
+export const FETCH_MOVIE_LIST: string = '@@FEATURES/MOVIE_LIST/FETCH_MOVIE_LIST';
+
+export const FETCH_MOVIE: string = '@@FEATURES/MOVIE/FETCH_MOVIE';
