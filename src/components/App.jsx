@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Search from './Search';
@@ -14,7 +13,7 @@ const AppMain = styled.main`
     width: 100%;
 `;
 
-class App extends Component<any> {
+class App extends Component {
     render() {
         return (
             <>
@@ -23,6 +22,7 @@ class App extends Component<any> {
                 <AppMain>
                     <Search/>
                     <ListView/>
+                    <DetailView/>
                 </AppMain>
             </>
         )
