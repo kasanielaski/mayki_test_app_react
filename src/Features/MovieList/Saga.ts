@@ -6,17 +6,17 @@ import {
 } from './ActionTypes';
 import { apiKey } from '../../config';
 
-function* fetchMovieList() {
+function* fetchMovieList(payload: any) {
     try {
-        const response = yield call(() =>
-            fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=blade/`).then(r =>
-                r.json()
-            )
+        const { Search } = yield call(() =>
+            fetch(
+                `http://www.omdbapi.com/?apikey=${apiKey}&s=${payload}/`
+            ).then(r => r.json())
         );
-        console.log(response);
-        // yield put({ type: MOVIE_LIST__FETCH, payload: 'ssssss' });
+        // yield put({ type: MOVIE_LIST__FETCH, payload: response });
     } catch (error) {
-        yield put({ type: MOVIE_LIST__FAIL, payload: error.message });
+        // yield put({ type: MOVIE_LIST__FAIL, payload: error.message });
+        console.log(error.message);
     }
 }
 

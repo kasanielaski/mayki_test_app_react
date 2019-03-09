@@ -6,7 +6,7 @@ const movieListReducer = handleActions(
     {
         [MOVIE_LIST__FETCH]: (state, { payload }) =>
             // @ts-ignore
-            state.set('movieList', payload.data)
+            state.set('movieList', payload)
     },
     movieListState
 );
