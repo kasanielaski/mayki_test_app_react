@@ -956,6 +956,11 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.1.tgz#48fd98c1561fe718b61733daed46ff115b496e18"
   integrity sha512-eqz8c/0kwNi/OEHQfvIuJVLTst3in0e7uTKeuY+WL/zfKn0xVujOTp42bS/vUUokhK5P2BppLd9JXMOMHcgbjA==
 
+"@types/redux-actions@^2.3.2":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/redux-actions/-/redux-actions-2.3.2.tgz#a141515f280d19fd53be7e8a9994985847423540"
+  integrity sha512-FjXZQQmHCq2mEvIyWdYAgcIYo4qEDLOMTjC2Zwp8s0MjR8jmJORr0Z6zmQLMhkOJh25cjPQ89V3tDgOE4wZx6g==
+
 "@types/tapable@1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.2.tgz#e13182e1b69871a422d7863e11a4a6f5b814a4bd"

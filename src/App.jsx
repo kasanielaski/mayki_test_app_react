@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Search from './Search';
-import ListView from './ListView';
-import DetailView from './DetailView';
+import Search from './components/Search';
+import ListView from './components/ListView';
+import DetailView from './components/DetailView';
 
 const AppHeader = styled.header`
     width: 100%;

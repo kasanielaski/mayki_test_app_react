@@ -1,10 +1,10 @@
 import { handleActions } from 'redux-actions';
-import { FETCH_MOVIE_LIST } from '../actions/ActionTypes';
+import { MOVIE_LIST__FETCH } from './ActionTypes';
 import movieListState from './movieListStore';
 
 const movieListReducer = handleActions(
     {
-        [FETCH_MOVIE_LIST]: (state, { payload }) =>
+        [MOVIE_LIST__FETCH]: (state, { payload }) =>
             // @ts-ignore
             state.set('movieList', payload.data)
     },
