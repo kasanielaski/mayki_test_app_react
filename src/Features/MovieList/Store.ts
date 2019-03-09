@@ -1,4 +1,4 @@
-import { Map } from "immutable";
+import { Map } from 'immutable';
 
 const movieListState = Map({
     movieList: []
