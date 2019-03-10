@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { IMovieShort } from '../../../intefaces';
-
 const MovieElement = styled.li`
     display: flex;
     justify-content: space-between;
@@ -19,13 +17,7 @@ const MovieElement = styled.li`
     }
 `;
 
-const MovieList = ({
-    data,
-    getMovie
-}: {
-    data: IMovieShort;
-    getMovie(payload: string): void;
-}) => {
+const MovieList = ({ data, getMovie }) => {
     return (
         <MovieElement onClick={() => getMovie(data.imdbID)}>
             <span>{data.Title}</span>

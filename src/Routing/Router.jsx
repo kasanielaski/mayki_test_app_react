@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     width: 50vw;
 `;
 
-const Router = (props: any) => (
+const Router = props => (
     <Wrapper>
         <Switch>
             <Route exact path="/" component={MovieListPage} {...props} />

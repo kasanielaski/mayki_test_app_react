@@ -11,7 +11,7 @@ const Wrapper = styled.main`
     border: 1px solid #ccc;
 `;
 
-const MoviePage = (props: any) => {
+const MoviePage = props => {
     return (
         <Wrapper>
             <Link to="/" replace>

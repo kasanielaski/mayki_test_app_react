@@ -1,13 +1,9 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-import {
-    MOVIE_LIST__GET,
-    MOVIE_LIST__FETCH,
-    MOVIE_LIST__FAIL
-} from './ActionTypes';
+import { MOVIE_LIST__GET, MOVIE_LIST__FETCH } from './ActionTypes';
 
 import { apiKey } from '../../config';
 
-function* fetchMovieList({ payload }: any) {
+function* fetchMovieList({ payload }) {
     try {
         const { Search, Error } = yield call(() =>
             fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${payload}`).then(

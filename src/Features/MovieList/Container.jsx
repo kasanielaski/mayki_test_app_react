@@ -39,18 +39,18 @@ const listActions = movieListActions.features.movieList;
 // @ts-ignore
 const movies = movieActions.features.movie;
 
-const mapDispatchToProps = (dispatch: any) =>
+const mapDispatchToProps = dispatch =>
     bindActionCreators({ ...listActions, ...movies }, dispatch);
 
-const MovieListPage = (props: any) => {
+const MovieListPage = props => {
     const [userInput, setInput] = useState('');
 
-    const getMovie = (payload: string) => {
+    const getMovie = payload => {
         props.movieGet(payload);
         props.history.push('/details');
     };
 
-    const list = props.movieList.map((item: any, index: number) => (
+    const list = props.movieList.map((item, index) => (
         <MovieList
             key={`${item.Title}_${index}`}
             data={item}
