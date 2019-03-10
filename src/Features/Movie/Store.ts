@@ -1,7 +1,7 @@
-import { Map } from "immutable";
+import { Map } from 'immutable';
 
 const movieState = Map({
-  movie: ""
+    movie: {}
 });
 
 export default movieState;

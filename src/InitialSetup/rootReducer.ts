@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux-immutable';
-import movie from '../Features/Movie/movie';
+import { movieReducer } from '../Features/Movie';
 import { movieListReducer } from '../Features/MovieList';
 
 export default combineReducers({
     // @ts-ignore
-    movie,
+    movieReducer,
     // @ts-ignore
     movieListReducer
 });

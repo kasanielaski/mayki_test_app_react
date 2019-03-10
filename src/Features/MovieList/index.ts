@@ -1,5 +1,5 @@
-import MovieList from './Container';
+import MovieListPage from './Container';
 import movieListReducer from './Reducer';
 import movieListSaga from './Saga';
 
-export { MovieList, movieListReducer, movieListSaga };
+export { MovieListPage, movieListReducer, movieListSaga };

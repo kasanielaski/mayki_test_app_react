@@ -5,10 +5,10 @@ import {
     MOVIE_LIST__FAIL
 } from './ActionTypes';
 
-const actions = createActions({
+const movieListActions = createActions({
     [MOVIE_LIST__GET]: (payload: string) => payload,
     [MOVIE_LIST__FETCH]: () => {},
     [MOVIE_LIST__FAIL]: payload => payload
 });
 
-export default actions;
+export default movieListActions;

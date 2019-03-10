@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Route, Switch, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { MovieList } from '../Features';
+import { MovieListPage } from '../Features';
 
 const Wrapper = styled.div`
     padding-top: 50px;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 const Router = (props: any) => (
     <Wrapper>
         <Switch>
-            <Route exact path="/" component={MovieList} {...props} />
+            <Route exact path="/" component={MovieListPage} {...props} />
         </Switch>
     </Wrapper>
 );

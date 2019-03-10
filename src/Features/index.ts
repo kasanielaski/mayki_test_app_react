@@ -1,3 +1,12 @@
-import { MovieList, movieListReducer, movieListSaga } from './MovieList';
+import { MovieListPage, movieListReducer, movieListSaga } from './MovieList';
 
-export { MovieList, movieListReducer, movieListSaga };
+import { MoviePage, movieReducer, movieSaga } from './Movie';
+
+export {
+    MovieListPage,
+    movieListReducer,
+    movieListSaga,
+    MoviePage,
+    movieReducer,
+    movieSaga
+};
