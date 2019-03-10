@@ -5,15 +5,11 @@ import styled from 'styled-components';
 
 import movieListActions from './Actions';
 import { movieListStore } from './Selectors';
-
 import movieActions from '../Movie/Actions';
 
 import { MovieList } from './Component';
 
-const Wrapper = styled.main`
-    margin: 0 auto;
-    width: 50vw;
-`;
+const Wrapper = styled.main``;
 
 const UserInput = styled.input`
     width: 75%;
@@ -51,6 +47,7 @@ const MovieListPage = (props: any) => {
 
     const getMovie = (payload: string) => {
         props.movieGet(payload);
+        props.history.push('/details');
     };
 
     const list = props.movieList.map((item: any, index: number) => (

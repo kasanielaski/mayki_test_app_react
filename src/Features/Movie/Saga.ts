@@ -10,7 +10,6 @@ function* fetchMovie({ payload }: any) {
                 r => r.json()
             )
         );
-        console.log(response);
         yield put({ type: MOVIE__FETCH, payload: response });
     } catch (error) {
         // yield put({ type: MOVIE_FAIL, payload: error.message });
