@@ -11,13 +11,38 @@ const Wrapper = styled.main`
     border: 1px solid #ccc;
 `;
 
-const MoviePage = props => {
+const MoviePage = ({
+    movie: {
+        Actors,
+        Awards,
+        Country,
+        Director,
+        Genre,
+        Language,
+        Metascore,
+        Plot,
+        Poster,
+        Rated,
+        Released,
+        Runtime,
+        Title,
+        Writer,
+        imdbRating
+    }
+}) => {
     return (
         <Wrapper>
             <Link to="/" replace>
                 back to main
             </Link>
-            movie details
+            <img src={Poster} alt="movie poster" />
+            <span>Title: {Title}</span>
+            <span>Actors: {Actors}</span>
+            <span>Director: {Director}</span>
+            <span>Country: {Country}</span>
+            <span>Genre: {Genre}</span>
+            <span>Plot: {Plot}</span>
+            <span>imdbRating: {imdbRating}</span>
         </Wrapper>
     );
 };

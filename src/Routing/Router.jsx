@@ -8,7 +8,7 @@ import { MovieListPage, MoviePage } from '../Features';
 const Wrapper = styled.div`
     padding-top: 50px;
     margin: 0 auto;
-    width: 50vw;
+    width: 35vw;
 `;
 
 const Router = props => (
@@ -20,4 +20,4 @@ const Router = props => (
     </Wrapper>
 );
 
-export default connect()(withRouter(Router));
+export default withRouter(connect()(Router));
