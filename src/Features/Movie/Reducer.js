@@ -4,9 +4,7 @@ import movieState from './Store';
 
 const movieReducer = handleActions(
     {
-        [MOVIE__FETCH]: (state, { payload }) =>
-            // @ts-ignore
-            state.set('movie', payload)
+        [MOVIE__FETCH]: (state, { payload }) => state.set('movie', payload)
     },
     movieState
 );

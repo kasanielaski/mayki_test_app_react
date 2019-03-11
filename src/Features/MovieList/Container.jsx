@@ -34,9 +34,7 @@ const ListWrapper = styled.ul`
     border-top-width: 0;
 `;
 
-// @ts-ignore
 const listActions = movieListActions.features.movieList;
-// @ts-ignore
 const movies = movieActions.features.movie;
 
 const mapDispatchToProps = dispatch =>

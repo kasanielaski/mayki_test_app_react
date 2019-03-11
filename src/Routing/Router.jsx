@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { MovieListPage, MoviePage } from '../Features';
 
 const Wrapper = styled.div`
-    padding-top: 50px;
+    padding: 50px 0;
     margin: 0 auto;
     width: 35vw;
 `;

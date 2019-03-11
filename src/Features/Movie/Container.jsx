@@ -11,6 +11,38 @@ const Wrapper = styled.main`
     border: 1px solid #ccc;
 `;
 
+const NavWrapper = styled.nav`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    border-bottom: 1px solid #ccc;
+`;
+
+const NavLink = styled(Link)`
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+        color: #888;
+    }
+`;
+
+const MoviePoster = styled.img`
+    object-fit: cover;
+    margin: 8px;
+`;
+
+const DetailItem = styled.li`
+    border-top: 1px solid #ccc;
+    padding: 8px;
+`;
+
+const Caption = styled.span`
+    font-weight: bold;
+    font-size: 1.2em;
+`;
+
 const MoviePage = ({
     movie: {
         Actors,
@@ -18,31 +50,66 @@ const MoviePage = ({
         Country,
         Director,
         Genre,
-        Language,
-        Metascore,
         Plot,
         Poster,
-        Rated,
-        Released,
-        Runtime,
         Title,
         Writer,
-        imdbRating
+        imdbRating,
+        Year
     }
 }) => {
     return (
         <Wrapper>
-            <Link to="/" replace>
-                back to main
-            </Link>
-            <img src={Poster} alt="movie poster" />
-            <span>Title: {Title}</span>
-            <span>Actors: {Actors}</span>
-            <span>Director: {Director}</span>
-            <span>Country: {Country}</span>
-            <span>Genre: {Genre}</span>
-            <span>Plot: {Plot}</span>
-            <span>imdbRating: {imdbRating}</span>
+            <NavWrapper>
+                <NavLink to="/" replace>
+                    back to main
+                </NavLink>
+            </NavWrapper>
+
+            <MoviePoster src={Poster} alt="movie poster" />
+
+            <ul>
+                <DetailItem>
+                    <Caption>Title: </Caption>
+                    {Title}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Actors: </Caption>
+                    {Actors}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Director: </Caption>
+                    {Director}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Writer: </Caption>
+                    {Writer}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Country: </Caption>
+                    {Country}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Genre: </Caption>
+                    {Genre}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Plot: </Caption>
+                    {Plot}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Awards: </Caption>
+                    {Awards}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>Year: </Caption>
+                    {Year}
+                </DetailItem>
+                <DetailItem>
+                    <Caption>imdbRating: </Caption>
+                    {imdbRating}
+                </DetailItem>
+            </ul>
         </Wrapper>
     );
 };
