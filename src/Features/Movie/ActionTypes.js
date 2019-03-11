@@ -1,3 +1,2 @@
 export const MOVIE__GET = '@@FEATURES/MOVIE/MOVIE__GET';
 export const MOVIE__FETCH = '@@FEATURES/MOVIE/MOVIE__FETCH';
-export const MOVIE_FAIL = '@@FEATURES/MOVIE/MOVIE__FAIL';

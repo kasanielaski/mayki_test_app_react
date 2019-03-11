@@ -16,7 +16,6 @@ function* fetchMovieList({ payload }) {
             yield put({ type: MOVIE_LIST__FETCH, payload: Search });
         }
     } catch (error) {
-        // yield put({ type: MOVIE_LIST__FAIL, payload: error.message });
         throw Error(`there is some error: ${error}`);
     }
 }
