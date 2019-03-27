@@ -17,7 +17,7 @@ const MovieElement = styled.li`
     }
 `;
 
-const MovieList = ({ data, getMovie }) => {
+const MovieList = ({ data, getMovie }: any) => {
     return (
         <MovieElement onClick={() => getMovie(data.imdbID)}>
             <span>{data.Title}</span>

@@ -4,7 +4,7 @@ import movieListState from './Store';
 
 const movieListReducer = handleActions(
     {
-        [MOVIE_LIST__FETCH]: (state, { payload }) =>
+        [MOVIE_LIST__FETCH]: (state, { payload }: any) =>
             state.set('movieList', payload)
     },
     movieListState

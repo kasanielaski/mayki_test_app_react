@@ -3,7 +3,7 @@ import { MOVIE_LIST__GET, MOVIE_LIST__FETCH } from './ActionTypes';
 
 import { apiKey } from '../../config';
 
-function* fetchMovieList({ payload }) {
+function* fetchMovieList({ payload }: any) {
     try {
         const { Search, Error } = yield call(() =>
             fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${payload}`).then(

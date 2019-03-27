@@ -11,7 +11,7 @@ const Wrapper = styled.div`
     width: 35vw;
 `;
 
-const Router = props => (
+const Router = (props: any) => (
     <Wrapper>
         <Switch>
             <Route exact path="/" component={MovieListPage} {...props} />
@@ -20,4 +20,4 @@ const Router = props => (
     </Wrapper>
 );
 
-export default withRouter(connect()(Router));
+export default withRouter<any>(connect()(Router));

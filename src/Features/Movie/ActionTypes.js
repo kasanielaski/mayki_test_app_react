@@ -1,2 +1,0 @@
-export const MOVIE__GET = '@@FEATURES/MOVIE/MOVIE__GET';
-export const MOVIE__FETCH = '@@FEATURES/MOVIE/MOVIE__FETCH';

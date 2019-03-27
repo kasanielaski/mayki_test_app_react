@@ -34,20 +34,26 @@ const ListWrapper = styled.ul`
     border-top-width: 0;
 `;
 
+// @ts-ignore
 const listActions = movieListActions.features.movieList;
+// @ts-ignore
 const movies = movieActions.features.movie;
 
+// @ts-ignore
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ ...listActions, ...movies }, dispatch);
 
+// @ts-ignore
 const MovieListPage = props => {
     const [userInput, setInput] = useState('');
 
+    // @ts-ignore
     const getMovie = payload => {
         props.movieGet(payload);
         props.history.push('/details');
     };
 
+    // @ts-ignore
     const list = props.movieList.map((item, index) => (
         <MovieList
             key={`${item.Title}_${index}`}
