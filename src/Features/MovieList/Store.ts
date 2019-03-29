@@ -1,6 +1,8 @@
 import { Map } from 'immutable';
 
-const movieListState = Map({
+import { IMovie } from '../../interfaces';
+
+const movieListState: Map<string, IMovie[]> = Map({
     movieList: []
 });
 

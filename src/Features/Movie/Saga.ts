@@ -4,7 +4,7 @@ import { MOVIE__GET, MOVIE__FETCH } from './ActionTypes';
 
 import { apiKey } from '../../config';
 
-function* fetchMovie({ payload }: any) {
+function* fetchMovie({ payload }: { payload: string }) {
     try {
         const response = yield call(() =>
             fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${payload}`).then(
@@ -18,5 +18,6 @@ function* fetchMovie({ payload }: any) {
 }
 
 export default function* movieSaga() {
+    // @ts-ignore
     yield takeLatest(MOVIE__GET, fetchMovie);
 }
