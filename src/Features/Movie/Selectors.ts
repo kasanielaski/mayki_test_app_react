@@ -1,12 +1,17 @@
 import { createSelector } from 'reselect';
+import { Map } from 'immutable';
+
+import { IMovieDetail } from '../../interfaces';
 
 const domain = ['movieReducer'];
 
-const movieFullSelector = (state: any) => state.getIn([...domain, 'movie']);
+const movieFullSelector = (state: Map<string, {}>) =>
+    state.getIn([...domain, 'movie']);
 
 const movieSelector = createSelector(
     movieFullSelector,
-    movie => ({ movie })
+    (movie: IMovieDetail) => ({ movie })
 );
 
-export const movieStore = (state: any) => movieSelector(state);
+export const movieStore = (state: Map<string, IMovieDetail>) =>
+    movieSelector(state);

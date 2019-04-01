@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { IMovie } from '../../../interfaces';
 
 const MovieElement = styled.li`
     display: flex;
@@ -17,7 +18,13 @@ const MovieElement = styled.li`
     }
 `;
 
-const MovieList = ({ data, getMovie }: any) => {
+const MovieList = ({
+    data,
+    getMovie
+}: {
+    data: IMovie;
+    getMovie: (payload: string) => void;
+}) => {
     return (
         <MovieElement onClick={() => getMovie(data.imdbID)}>
             <span>{data.Title}</span>

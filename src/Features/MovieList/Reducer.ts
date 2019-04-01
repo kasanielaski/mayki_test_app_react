@@ -7,7 +7,6 @@ import { IMovie } from '../../interfaces';
 const movieListReducer = handleActions(
     {
         [MOVIE_LIST__FETCH]: (state, { payload }: { payload: IMovie[] }) =>
-            // @ts-ignore
             state.set('movieList', payload)
     },
     movieListState

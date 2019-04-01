@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
+import { IMovieListPageProps } from '../../interfaces';
 import movieListActions from './Actions';
 import { movieListStore } from './Selectors';
 import movieActions from '../Movie/Actions';
@@ -43,17 +44,14 @@ const movies = movieActions.features.movie;
 const mapDispatchToProps = dispatch =>
     bindActionCreators({ ...listActions, ...movies }, dispatch);
 
-// @ts-ignore
-const MovieListPage = props => {
+const MovieListPage = (props: IMovieListPageProps) => {
     const [userInput, setInput] = useState('');
 
-    // @ts-ignore
-    const getMovie = payload => {
+    const getMovie = (payload: string) => {
         props.movieGet(payload);
         props.history.push('/details');
     };
 
-    // @ts-ignore
     const list = props.movieList.map((item, index) => (
         <MovieList
             key={`${item.Title}_${index}`}

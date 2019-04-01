@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { IMovieDetail } from '../../interfaces';
 import { movieStore } from './Selectors';
 
 const Wrapper = styled.main`
@@ -45,29 +46,20 @@ const Caption = styled.span`
 
 const MoviePage = ({
     movie: {
-        // @ts-ignore
         Actors,
-        // @ts-ignore
         Awards,
-        // @ts-ignore
         Country,
-        // @ts-ignore
         Director,
-        // @ts-ignore
         Genre,
-        // @ts-ignore
         Plot,
-        // @ts-ignore
         Poster,
-        // @ts-ignore
         Title,
-        // @ts-ignore
         Writer,
-        // @ts-ignore
         imdbRating,
-        // @ts-ignore
         Year
     }
+}: {
+    movie: IMovieDetail;
 }) => {
     return (
         <Wrapper>

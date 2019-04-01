@@ -1,5 +1,4 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
-// @ts-ignore
 import { MOVIE__GET, MOVIE__FETCH } from './ActionTypes';
 
 import { apiKey } from '../../config';
